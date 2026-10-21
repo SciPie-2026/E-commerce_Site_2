@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --blush: #F4DDE3;
+  --rose: #D99BAA;
+  --ivory: #FFF9F4;
+  --cream: #F7EFE7;
+  --gold: #C8A56A;
+  --cocoa: #755B57;
+  --charcoal: #30272B;
+  --white: #FFFFFF;
+  --rose-light: #FAF0F3;
+  --gold-light: #F8F3EA;
+  --border-light: #EFE5DC;
+
+  --background: #FFF9F4;
+  --foreground: #30272B;
+}
+
+@theme inline {
+  --color-blush: var(--blush);
+  --color-rose: var(--rose);
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-cocoa: var(--cocoa);
+  --color-charcoal: var(--charcoal);
+  --color-white: var(--white);
+  --color-rose-light: var(--rose-light);
+  --color-gold-light: var(--gold-light);
+  --color-border-light: var(--border-light);
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base boutique styling */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial selection */
+::selection {
+  background-color: #F4DDE3;
+  color: #30272B;
+}
+
+/* Subtle luxury scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D99BAA;
+  border-radius: 9999px;
+  border: 2px solid #FFF9F4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A56A;
+}
+
+/* Editorial headings */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+  letter-spacing: -0.015em;
+}
+
+.gold-shimmer {
+  background: linear-gradient(135deg, #C8A56A 0%, #E6D2B1 50%, #C8A56A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glass & translucent boutique card surfaces */
+.boutique-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 155, 170, 0.2);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.boutique-card:hover {
+  border-color: rgba(200, 165, 106, 0.5);
+  box-shadow: 0 12px 36px -10px rgba(117, 91, 87, 0.12);
+  transform: translateY(-3px);
+}
+
+/* Elegant gold button */
+.btn-gold {
+  background-color: #30272B;
+  color: #FFF9F4;
+  border: 1px solid #30272B;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #C8A56A;
+  border-color: #C8A56A;
+  color: #FFFFFF;
+}
+
+.btn-outline-boutique {
+  background-color: transparent;
+  color: #30272B;
+  border: 1px solid #D99BAA;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-boutique:hover {
+  background-color: #F4DDE3;
+  border-color: #C8A56A;
+  color: #30272B;
+}
